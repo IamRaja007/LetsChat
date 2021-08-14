@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LetsChat</string>
+    <string name="verify_number_otp">Verify %s</string>
+    <string name="waiting_for_otp">Waiting to automatically detect an SMS sent to\n %s Wrong number?</string>
+    <string name="time_remaining">Time remaining in seconds: %d</string>
+    <string name="Yesterday">Yesterday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Today">Today</string>
+    <string name="enterStatus">Enter your status</string>
+</resources>

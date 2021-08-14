@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+        android:id="@+id/ivbluebackground"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_rectanglebackgroundblue"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivWelcome"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_authenticatingyou"
+            app:layout_constraintWidth_percent="0.71"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintVertical_bias="0.19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ivbluebackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_tickright"
+            app:layout_constraintWidth_percent="0.42"
+            app:layout_constraintHeight_percent="0.22"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivWelcome"
+            app:layout_constraintBottom_toBottomOf="@id/ivbluebackground" />
+
+        <ImageView
+            android:id="@+id/ivbackgroundWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_backgroundrectanglewhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
+
+        <TextView
+            android:id="@+id/tvVerifyNUMBER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_light"
+            android:text="Verify +911234567892"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/etOTP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivbackgroundWhite"
+            app:layout_constraintVertical_bias="0.44" />
+
+        <TextView
+            android:id="@+id/tvwaitingforOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center"
+            android:text="Waiting to automatically detect an SMS sent to"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVerifyNUMBER" />
+
+        <TextView
+            android:id="@+id/tvtimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="02:50"
+            android:gravity="center"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tvwaitingforOTP"
+            app:layout_constraintBottom_toTopOf="@id/etOTP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/etOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint=" ------ "
+            android:inputType="phone"
+            android:letterSpacing="1"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtimer"
+            app:layout_constraintBottom_toTopOf="@id/tventer6digit"/>
+
+        <TextView
+            android:id="@+id/tventer6digit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter 6-digit code"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/etOTP"
+            app:layout_constraintBottom_toTopOf="@id/btnSendCode"/>
+
+        <Button
+            android:id="@+id/btnSendCode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg_with_ripple"
+            android:text="Proceed"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnResendCode"
+            app:layout_constraintTop_toBottomOf="@id/tventer6digit" />
+
+        <Button
+            android:id="@+id/btnResendCode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_bg_with_ripple"
+            android:enabled="false"
+            android:text="Resend code"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ivbackgroundWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSendCode" />
+
+        <ImageView
+            android:id="@+id/ivbubble"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_bubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.18"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintTop_toBottomOf="@id/ivbackgroundWhite"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivmadeInIndia"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_madeinindia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.034"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivbackgroundWhite"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintVertical_bias="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

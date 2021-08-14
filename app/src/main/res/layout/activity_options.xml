@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/civUserOptions"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="5dp"
+        app:shapeAppearanceOverlay="@style/CircleImageView_Style"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toTopOf="@id/tvNameInfo"/>
+
+    <TextView
+        android:id="@+id/tvNameOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Name"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/civUserOptions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.14"/>
+
+    <TextView
+        android:id="@+id/tvNameOptionsHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/roboto_regular"
+        android:maxLines="1"
+        android:text="Raja"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/tvNameOptions"
+        app:layout_constraintTop_toBottomOf="@id/tvNameOptions"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnchangeName"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_bg_with_ripple"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintVertical_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintBottom_toTopOf="@+id/tvNameInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvNameOptionsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/civUserOptions" />
+
+    <TextView
+        android:id="@+id/tvNameInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="This name is visible to your connections."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/tvNameOptionsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameOptionsHolder"
+        app:layout_constraintBottom_toTopOf="@id/viewLine"/>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="350dp"
+        android:layout_height="0.5dp"
+        android:background="#807F7F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/tvNameInfo"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@id/tvNameOptionsHolder" />
+
+    <TextView
+        android:id="@+id/tvStatusOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Status"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewLine"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/tvStatusOptionsHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/roboto_regular"
+        android:maxLines="1"
+        android:text="Hey wassup"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+
+        app:layout_constraintStart_toStartOf="@+id/tvStatusOptions"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusOptions"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnchangeStatus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_bg_with_ripple"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatusOptionsInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toEndOf="@id/tvStatusOptionsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/civUserOptions"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <TextView
+        android:id="@+id/tvStatusOptionsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="This status is visible to your connections."
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/tvStatusOptionsHolder"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusOptionsHolder" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_downwave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

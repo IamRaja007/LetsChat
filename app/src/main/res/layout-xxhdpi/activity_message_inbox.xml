@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootviewInbox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_arrow_back">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal"
+            android:paddingEnd="18dp">
+
+            <TextView
+                android:id="@+id/tvFriendName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Raja Bhandari"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_call_24" />
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlinputbox"
+        android:layout_below="@id/toolbar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvshowmessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="9"
+            tools:listitem="@layout/item_inbox_message_sent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlinputbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@id/ivsendbtn"
+            android:elevation="1dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.vanniktech.emoji.EmojiEditText
+                    android:id="@+id/eetmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="#E8E7E7"
+                    android:gravity="top|start"
+                    android:hint="Type your message"
+                    android:textColorHint="@color/darkBlue"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine|textCapSentences|textLongMessage|text"
+                    android:lineSpacingExtra="5dp"
+                    android:maxHeight="120dp"
+                    android:maxLength="700"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="25dp"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ivsmileyEmoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="265dp"
+                    android:src="@drawable/ic_smiley" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/ivsendbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_send_btn" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

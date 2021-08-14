@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "857590677976",
+    "project_id": "whatsapp-eecac",
+    "storage_bucket": "whatsapp-eecac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857590677976:android:fe08ffbb321fd15baf32ad",
+        "android_client_info": {
+          "package_name": "com.example.letschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857590677976-739njc5hrmbcp2p13lratnaqa8vea5ao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.letschat",
+            "certificate_hash": "5229d537c03bc3734851e83b33d54fee06dcddca"
+          }
+        },
+        {
+          "client_id": "857590677976-h4k05km8u4vsitgads9lend2bggkjg3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjtYjGJK_vAfFZRBQc1cOESiLafi25xyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857590677976-h4k05km8u4vsitgads9lend2bggkjg3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
